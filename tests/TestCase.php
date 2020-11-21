@@ -36,7 +36,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Returns a PSR7 ApiResponse (JSON) for a given fixture.
+     * Returns a PSR7 Response (JSON) for a given fixture.
      *
      * @param string  $fixture  the fixture to create the response for
      * @param int $statusCode  a HTTP Status Code for the response

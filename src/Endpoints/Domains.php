@@ -2,11 +2,11 @@
 
 namespace Humanik\Namecheap\API\Endpoints;
 
-use Humanik\Namecheap\API\ApiResponse;
+use Humanik\Namecheap\API\Response;
 
 class Domains extends AbstractEndpoint
 {
-    public function getList(array $params = []): ApiResponse
+    public function getList(array $params = []): Response
     {
         return $this->createResponse(
             $this->command('domains.getList', $params),
@@ -16,7 +16,7 @@ class Domains extends AbstractEndpoint
         );
     }
 
-    public function create(array $params = []): ApiResponse
+    public function create(array $params = []): Response
     {
         return $this->createResponse(
             $this->command('domains.create', $params),

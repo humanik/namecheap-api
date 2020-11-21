@@ -3,7 +3,7 @@
 namespace Humanik\Namecheap\API\Endpoints;
 
 use Humanik\Namecheap\API\Adapter\Adapter;
-use Humanik\Namecheap\API\ApiResponse;
+use Humanik\Namecheap\API\Response;
 use Psr\Http\Message\ResponseInterface;
 
 class AbstractEndpoint
@@ -29,7 +29,7 @@ class AbstractEndpoint
         return $this->client->get('', $params, $headers);
     }
 
-    protected function createResponse(ResponseInterface $response, callable $parseResult): ApiResponse
+    protected function createResponse(ResponseInterface $response, callable $parseResult): Response
     {
         $xml = simplexml_load_string((string)$response->getBody(), 'SimpleXMLElement');
         $json = json_encode($xml);
@@ -37,7 +37,7 @@ class AbstractEndpoint
         $data = $this->levelUp($data, '@attributes');
         $result = call_user_func($parseResult, $data['CommandResponse']);
 
-        return new ApiResponse($result, $data);
+        return new Response($result, $data);
     }
 
     protected function levelUp(array $data, string $key): array

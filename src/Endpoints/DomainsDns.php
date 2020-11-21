@@ -2,11 +2,11 @@
 
 namespace Humanik\Namecheap\API\Endpoints;
 
-use Humanik\Namecheap\API\ApiResponse;
+use Humanik\Namecheap\API\Response;
 
 class DomainsDns extends AbstractEndpoint
 {
-    public function setCustom(string $domain, array $nameservers): ApiResponse
+    public function setCustom(string $domain, array $nameservers): Response
     {
         $params = ['Nameservers' => implode(',', $nameservers)] + $this->domainToParams($domain);
 

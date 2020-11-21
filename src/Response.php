@@ -2,7 +2,7 @@
 
 namespace Humanik\Namecheap\API;
 
-class ApiResponse
+class Response
 {
     protected array $result;
     protected array $data;
