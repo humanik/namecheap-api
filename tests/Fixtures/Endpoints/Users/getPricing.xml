@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiResponse xmlns="http://api.namecheap.com/xml.response" Status="OK">
+    <Errors/>
+    <RequestedCommand>namecheap.users.getPricing</RequestedCommand>
+    <CommandResponse Type="namecheap.users.getPricing">
+        <UserGetPricingResult>
+            <ProductType Name="DOMAIN">
+                <ProductCategory Name="REACTIVATE">
+                    <Product Name="biz">
+                        <Price Duration="1" DurationType="YEAR" Price="8.55" RegularPrice="8.55" YourPrice="8.55"
+                               CouponPrice="" Currency="USD"/>
+                        <Price Duration="2" DurationType="YEAR" Price="8.87" RegularPrice="8.87" YourPrice="8.87"
+                               CouponPrice="" Currency="USD"/>
+                    </Product>
+                    <Product Name="bz">
+                        <Price Duration="1" DurationType="YEAR" Price="8.88" RegularPrice="8.88" YourPrice="8.88"
+                               CouponPrice="" Currency="USD"/>
+                    </Product>
+                </ProductCategory>
+                <ProductCategory Name="REGISTER">
+                    <Product Name="biz">
+                        <Price Duration="1" DurationType="YEAR" Price="6.00" RegularPrice="6.00" YourPrice="6.00"
+                               CouponPrice="" Currency="USD"/>
+                        <Price Duration="2" DurationType="YEAR" Price="8.87" RegularPrice="8.87" YourPrice="8.87"
+                               CouponPrice="" Currency="USD"/>
+                    </Product>
+                </ProductCategory>
+            </ProductType>
+        </UserGetPricingResult>
+    </CommandResponse>
+    <Server>IMWS-A06</Server>
+    <GMTTimeDifference>+5:30</GMTTimeDifference>
+    <ExecutionTime>1.109</ExecutionTime>
+</ApiResponse>
